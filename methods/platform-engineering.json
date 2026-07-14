@@ -1,0 +1,12 @@
+{
+  "kind": "method",
+  "name": "Platform Engineering",
+  "description": "An example of a composed platform engineering practice using a composite baseline and multiple practices",
+  "baselinePracticeName": "IDP Essentials",
+  "practiceNames": [
+    "Platform Engineering (CNCF)",
+    "Team Topologies Lifecycle",
+    "Organizational Evolution & Sensing",
+    "Team Structure & Cognitive Load"
+  ]
+}

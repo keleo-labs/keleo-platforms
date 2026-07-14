@@ -1,0 +1,145 @@
+{
+  "kind": "method",
+  "name": "Team Topologies",
+  "description": "Organizational design methodology enabling fast flow through team types, interaction modes, cognitive load management, and continuous organizational sensing.",
+  "baselinePracticeName": "Platform Adoption Essentials",
+  "tags": {
+    "domainTags": [
+      "Organizational Design",
+      "Platform Engineering",
+      "DevOps"
+    ],
+    "lifecycleTags": [
+      "Adoption",
+      "Evolution",
+      "Optimization"
+    ],
+    "organizationalTags": [
+      "Executive Leadership",
+      "Platform Team",
+      "Stream-Aligned Team",
+      "Enabling Team"
+    ]
+  },
+  "narratives": [
+    {
+      "name": "Team Topologies Journey",
+      "description": "The organizational transformation journey from static structures to dynamic, sensing-driven team topologies enabling fast flow.",
+      "narrativeTypeName": "Hero's Journey",
+      "narrativeContexts": [
+        {
+          "seq": 1,
+          "narrativeElementName": "Ordinary World",
+          "context": "Organizations struggle with static hierarchical teams causing bottlenecks, dependencies, and misalignment between communication structures and system architecture per Conway's Law."
+        },
+        {
+          "seq": 2,
+          "narrativeElementName": "Call to Adventure",
+          "context": "Recognition that team structure determines software architecture and value flow speed, requiring intentional organizational design using four fundamental team types and explicit interaction modes."
+        },
+        {
+          "seq": 3,
+          "narrativeElementName": "Tests and Allies",
+          "context": "Platform teams reduce cognitive load through self-service capabilities while enabling teams facilitate adoption, supported by team APIs defining collaboration boundaries and platform as product thinking."
+        },
+        {
+          "seq": 4,
+          "narrativeElementName": "Transformation",
+          "context": "Organizational sensing enables continuous topology evolution through teams as sensors detecting when adjustments needed based on performance signals and cognitive load indicators."
+        },
+        {
+          "seq": 5,
+          "narrativeElementName": "Return with Elixir",
+          "context": "Sustained fast flow becomes competitive advantage with demonstrable productivity gains, deployment reliability improvements, and mastery of architecture-organization co-evolution through sensing-driven adaptation."
+        }
+      ],
+      "citationNames": [
+        "Team Topologies Book",
+        "Conway's Law Paper",
+        "Platform Engineering Approach"
+      ]
+    }
+  ],
+  "citations": [
+    {
+      "name": "Cognitive Load Reduction Article",
+      "description": "Application of Team Topologies principles to reduce cognitive load and prevent burnout.",
+      "authors": [
+        "SoftwareSeni"
+      ],
+      "date": "2024",
+      "source": "SoftwareSeni",
+      "url": "https://www.softwareseni.com/applying-team-topologies-to-reduce-cognitive-load-and-burnout/"
+    },
+    {
+      "name": "DevOps Handbook",
+      "description": "Comprehensive guide to DevOps practices including The Three Ways",
+      "authors": [
+        "Gene Kim",
+        "Jez Humble",
+        "Patrick Debois",
+        "John Willis"
+      ],
+      "date": "2016",
+      "source": "IT Revolution Press"
+    },
+    {
+      "name": "Platform Engineering Approach",
+      "description": "Integration of Team Topologies with platform engineering strategy",
+      "authors": [
+        "Matthew Skelton",
+        "Manuel Pais"
+      ],
+      "date": "2026",
+      "source": "Team Topologies",
+      "url": "https://teamtopologies.com/platform-engineering"
+    },
+    {
+      "name": "Platform Manifesto",
+      "description": "Six principles for platform as product approach including teams over tools and adoption over mandates.",
+      "authors": [
+        "Team Topologies Community"
+      ],
+      "date": "2025",
+      "source": "Team Topologies",
+      "url": "https://teamtopologies.com/platform-manifesto"
+    },
+    {
+      "name": "Team Topologies Book",
+      "description": "Foundational book on organizing teams for fast flow by Matthew Skelton and Manuel Pais.",
+      "authors": [
+        "Matthew Skelton",
+        "Manuel Pais"
+      ],
+      "date": "2019",
+      "source": "IT Revolution Press",
+      "url": "https://teamtopologies.com/book"
+    },
+    {
+      "name": "Team Topologies Book Chapter 8",
+      "description": "Chapter on organizational sensing and evolution",
+      "authors": [
+        "Matthew Skelton",
+        "Manuel Pais"
+      ],
+      "date": "2019",
+      "source": "IT Revolution Press - Chapter 8"
+    },
+    {
+      "name": "Team Topologies Key Concepts",
+      "description": "Website documentation of core Team Topologies framework elements and principles.",
+      "authors": [
+        "Matthew Skelton",
+        "Manuel Pais"
+      ],
+      "date": "2025",
+      "source": "Team Topologies",
+      "url": "https://teamtopologies.com/key-concepts"
+    }
+  ],
+  "practiceNames": [
+    "Team Structure & Cognitive Load",
+    "Organizational Evolution & Sensing",
+    "Team Topologies Lifecycle"
+  ]
+}

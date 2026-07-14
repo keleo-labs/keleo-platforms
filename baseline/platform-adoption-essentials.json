@@ -1,6 +1,16 @@
 {
+  "kind": "practiceBaseline",
   "name": "Platform Adoption Essentials",
   "description": "The Platform Adoption Kernel establishes the universal foundation for platform transformations, organized into the three Areas of Concern.",
+  "version": "1",
+  "authors": [
+    "Kernel Authors"
+  ],
+  "keywords": [
+    "platform",
+    "adoption",
+    "kernel"
+  ],
   "focuses": [
     {
       "name": "Value",
@@ -20,6 +30,26 @@
       "name": "Opportunity",
       "description": "The foundational business drivers dictating the platform transformation.",
       "focusName": "Value",
+      "assetNames": [
+        {
+          "assetName": "opportunity-icon",
+          "type": "icon"
+        }
+      ],
+      "relatesTo": [
+        {
+          "relationship": "identified by",
+          "alphaName": "Stakeholders"
+        },
+        {
+          "relationship": "drives",
+          "alphaName": "Requirements"
+        },
+        {
+          "relationship": "justifies",
+          "alphaName": "Platform Value And Economics"
+        }
+      ],
       "states": [
         {
           "name": "Initiated",
@@ -63,6 +93,22 @@
       "name": "Platform Value And Economics",
       "description": "The financial and outcome-based justification and accounting for the platform.",
       "focusName": "Value",
+      "assetNames": [
+        {
+          "assetName": "platform-value-economics-icon",
+          "type": "icon"
+        }
+      ],
+      "relatesTo": [
+        {
+          "relationship": "identifies ROI for",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "communicates value to",
+          "alphaName": "Stakeholders"
+        }
+      ],
       "states": [
         {
           "name": "Modeled",
@@ -88,6 +134,26 @@
       "name": "Stakeholders",
       "description": "The individuals, groups, or organizations affected by, or able to affect, the platform.",
       "focusName": "Value",
+      "assetNames": [
+        {
+          "assetName": "stakeholders-icon",
+          "type": "icon"
+        }
+      ],
+      "relatesTo": [
+        {
+          "relationship": "provides",
+          "alphaName": "Requirements"
+        },
+        {
+          "relationship": "funds",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "provides feedback to",
+          "alphaName": "Team"
+        }
+      ],
       "states": [
         {
           "name": "Recognized",
@@ -131,6 +197,20 @@
       "name": "Requirements",
       "description": "The capabilities, features, and constraints the platform must satisfy.",
       "focusName": "Solution",
+      "relatesTo": [
+        {
+          "relationship": "guides design of",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "defines scope for",
+          "alphaName": "Work"
+        },
+        {
+          "relationship": "guides design of",
+          "alphaName": "Platform Consumption Interface"
+        }
+      ],
       "states": [
         {
           "name": "Conceived",
@@ -168,55 +248,106 @@
           "seq": 6,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "requirements-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Platform",
-      "description": "The unified system of assets and interfaces provided to consumers.",
+      "description": "The unified system of infrastructure, compute resources, networking, storage, and foundational services that provide the technical foundation for hosting and operating platform assets. This includes clusters, virtual machines, container orchestrators, databases, message queues, load balancers, and other infrastructure components that form the substrate upon which applications and services run.",
       "focusName": "Solution",
+      "relatesTo": [
+        {
+          "relationship": "built by",
+          "alphaName": "Team"
+        },
+        {
+          "relationship": "hosts",
+          "alphaName": "Platform Asset"
+        },
+        {
+          "relationship": "exposes",
+          "alphaName": "Platform Consumption Interface"
+        },
+        {
+          "relationship": "governed by",
+          "alphaName": "Platform Governance"
+        }
+      ],
       "states": [
         {
           "name": "Architecture Selected",
-          "description": "The foundational structure is chosen.",
+          "description": "The foundational structural boundaries, hosting paradigms, and technical strategies are formally selected and agreed upon by enterprise architecture.",
           "seq": 1,
           "checklist": []
         },
         {
           "name": "Baselined",
-          "description": "Core capabilities are established.",
+          "description": "Core capabilities, shared services, and network perimeters are logically mapped, with constraints and integration points clearly defined.",
           "seq": 2,
           "checklist": []
         },
         {
           "name": "Provisioned",
-          "description": "The platform can be consumed.",
+          "description": "The foundational infrastructure and shared environments have been instantiated and are ready to support integration, though not yet accepting live production workloads.",
           "seq": 3,
           "checklist": []
         },
         {
           "name": "Ready",
-          "description": "The platform is fully operational.",
+          "description": "The platform is fully operational, resilient, and successfully integrated with consumption interfaces, enabling autonomous developer self-service.",
           "seq": 4,
           "checklist": []
         },
         {
           "name": "Hosting Assets",
-          "description": "The platform is actively supporting workloads.",
+          "description": "The platform is actively, securely, and reliably supporting external application workloads serving live enterprise traffic.",
           "seq": 5,
           "checklist": []
         },
         {
           "name": "Evolving",
-          "description": "The platform is decommissioned.",
+          "description": "The platform architecture autonomously adapts using predictive scaling and continuous feedback, while obsolete legacy capabilities are gracefully decoupled and decommissioned.",
           "seq": 6,
           "checklist": []
+        },
+        {
+          "name": "Retiring",
+          "description": "The platform is being systematically decommissioned, with workloads migrated to alternative platforms and infrastructure safely removed.",
+          "seq": 7,
+          "checklist": []
+        }
+      ],
+      "assetNames": [
+        {
+          "assetName": "platform-icon",
+          "type": "icon"
         }
       ]
     },
     {
       "name": "Platform Consumption Interface",
-      "description": "The means by which consumers interact with and consume platform assets.",
+      "description": "The means by which consumers discover, access, and consume platform capabilities, including developer portals, service catalogs, CLI tools, APIs, SDKs, documentation hubs, golden path templates, and self-service workflows that abstract the underlying platform complexity and provide a developer-friendly consumption experience.",
       "focusName": "Solution",
+      "contributesTo": "Platform",
+      "relatesTo": [
+        {
+          "relationship": "enables access to",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "facilitates deployment of",
+          "alphaName": "Platform Asset"
+        },
+        {
+          "relationship": "drives adoption through",
+          "alphaName": "Stakeholders"
+        }
+      ],
       "states": [
         {
           "name": "Envisioned",
@@ -244,16 +375,36 @@
         },
         {
           "name": "Optimized",
-          "description": "The interface provides a frictionless experience.",
+          "description": "The interface dynamically adapts based on deep user telemetry, providing a frictionless, self-service experience that actively minimizes developer cognitive load.",
           "seq": 5,
           "checklist": []
+        }
+      ],
+      "assetNames": [
+        {
+          "assetName": "platform-consumption-interface-icon",
+          "type": "icon"
         }
       ]
     },
     {
       "name": "Platform Asset",
-      "description": "The individual services, tools, or resources that constitute the platform.",
+      "description": "The individual applications, services, databases, message streams, or workloads that consumers create, deploy, and operate on the platform infrastructure. These are the business-value-delivering artifacts that run atop the platform substrate and are accessed through the platform consumption interface.",
       "focusName": "Solution",
+      "relatesTo": [
+        {
+          "relationship": "realizes",
+          "alphaName": "Platform Value And Economics"
+        },
+        {
+          "relationship": "addresses",
+          "alphaName": "Opportunity"
+        },
+        {
+          "relationship": "consumes",
+          "alphaName": "Platform"
+        }
+      ],
       "states": [
         {
           "name": "Identified",
@@ -263,7 +414,7 @@
         },
         {
           "name": "Specified",
-          "description": "Asset requirements are detailed.",
+          "description": "The asset's architectural footprint, resource dependencies, and required platform integrations are explicitly detailed and approved.",
           "seq": 2,
           "checklist": []
         },
@@ -275,7 +426,7 @@
         },
         {
           "name": "Integrated",
-          "description": "The asset works within the broader platform.",
+          "description": "The asset is successfully configured to natively consume platform-provided shared services (e.g., logging, identity, routing) within non-production environments.",
           "seq": 4,
           "checklist": []
         },
@@ -287,9 +438,21 @@
         },
         {
           "name": "Value Yielding",
-          "description": "The asset is decommissioned.",
+          "description": "The asset is demonstrably delivering measurable value to platform consumers and the broader enterprise.",
           "seq": 6,
           "checklist": []
+        },
+        {
+          "name": "Retiring",
+          "description": "The asset is being systematically decommissioned and replaced, with dependencies migrated and resources reclaimed.",
+          "seq": 7,
+          "checklist": []
+        }
+      ],
+      "assetNames": [
+        {
+          "assetName": "platform-asset-icon",
+          "type": "icon"
         }
       ]
     },
@@ -297,6 +460,20 @@
       "name": "Work",
       "description": "The activities required to build, operate, and maintain the platform.",
       "focusName": "Endeavor",
+      "relatesTo": [
+        {
+          "relationship": "produces",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "produces",
+          "alphaName": "Platform Consumption Interface"
+        },
+        {
+          "relationship": "delivers",
+          "alphaName": "Platform Asset"
+        }
+      ],
       "states": [
         {
           "name": "Initiated",
@@ -334,12 +511,32 @@
           "seq": 6,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "work-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Team",
       "description": "The group of individuals responsible for the platform's success.",
       "focusName": "Endeavor",
+      "relatesTo": [
+        {
+          "relationship": "performs",
+          "alphaName": "Work"
+        },
+        {
+          "relationship": "applies",
+          "alphaName": "Way Of Working"
+        },
+        {
+          "relationship": "manages",
+          "alphaName": "Platform Risk And Compliance"
+        }
+      ],
       "states": [
         {
           "name": "Seeded",
@@ -371,12 +568,28 @@
           "seq": 5,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "team-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Way Of Working",
       "description": "The tailored set of practices, tools, operational workflows, and industry alignments used by a team.",
       "focusName": "Endeavor",
+      "relatesTo": [
+        {
+          "relationship": "guides",
+          "alphaName": "Work"
+        },
+        {
+          "relationship": "incorporates",
+          "alphaName": "Platform Governance"
+        }
+      ],
       "states": [
         {
           "name": "Principles Established",
@@ -414,12 +627,32 @@
           "seq": 6,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "way-of-working-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Platform Governance",
       "description": "Automated controls, policies, and guardrails",
       "focusName": "Endeavor",
+      "relatesTo": [
+        {
+          "relationship": "constrains",
+          "alphaName": "Platform"
+        },
+        {
+          "relationship": "enforces policies on",
+          "alphaName": "Platform Asset"
+        },
+        {
+          "relationship": "mitigates",
+          "alphaName": "Platform Risk And Compliance"
+        }
+      ],
       "states": [
         {
           "name": "Scoped",
@@ -439,12 +672,32 @@
           "seq": 3,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "platform-governance-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Platform Risk And Compliance",
       "description": "Measures the business risk evaluation, security posture validation, and compliance mitigation maturity.",
       "focusName": "Value",
+      "relatesTo": [
+        {
+          "relationship": "impacts",
+          "alphaName": "Opportunity"
+        },
+        {
+          "relationship": "influences",
+          "alphaName": "Requirements"
+        },
+        {
+          "relationship": "informs",
+          "alphaName": "Platform Governance"
+        }
+      ],
       "states": [
         {
           "name": "Identified",
@@ -470,12 +723,32 @@
           "seq": 4,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "platform-risk-compliance-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Organizational Change",
       "description": "The organizational patterns, business rationale, and change management required to support the platform transformation.",
       "focusName": "Endeavor",
+      "relatesTo": [
+        {
+          "relationship": "enables",
+          "alphaName": "Team"
+        },
+        {
+          "relationship": "informs",
+          "alphaName": "Way Of Working"
+        },
+        {
+          "relationship": "supports adoption of",
+          "alphaName": "Platform"
+        }
+      ],
       "states": [
         {
           "name": "Recognized",
@@ -501,6 +774,12 @@
           "seq": 4,
           "checklist": []
         }
+      ],
+      "assetNames": [
+        {
+          "assetName": "organizational-change-icon",
+          "type": "icon"
+        }
       ]
     }
   ],
@@ -517,6 +796,12 @@
       ],
       "requiredCompetencies": [
         "Platform Strategic Alignment"
+      ],
+      "assetNames": [
+        {
+          "assetName": "explore-possibilities-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -540,6 +825,12 @@
       "requiredCompetencies": [
         "Platform Strategic Alignment",
         "Analysis"
+      ],
+      "assetNames": [
+        {
+          "assetName": "assess-business-value-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -554,11 +845,21 @@
         {
           "alphaName": "Opportunity",
           "stateName": "Benefit Accrued"
+        },
+        {
+          "alphaName": "Platform Asset",
+          "stateName": "Value Yielding"
         }
       ],
       "requiredCompetencies": [
         "Management",
         "Analysis"
+      ],
+      "assetNames": [
+        {
+          "assetName": "monitor-value-realization-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -578,6 +879,12 @@
       "requiredCompetencies": [
         "Platform Strategic Alignment",
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "manage-platform-economics-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -601,6 +908,12 @@
       "requiredCompetencies": [
         "Stakeholder Representation",
         "Analysis"
+      ],
+      "assetNames": [
+        {
+          "assetName": "engage-platform-consumers-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -620,12 +933,18 @@
       "requiredCompetencies": [
         "Stakeholder Representation",
         "Leadership"
+      ],
+      "assetNames": [
+        {
+          "assetName": "evangelize-support-icon",
+          "type": "icon"
+        }
       ]
     },
     {
       "name": "Establish Secure Guardrails",
       "description": "Shift security left, embed Zero Trust principles, and codify compliance requirements into automated scanning tools to ensure secure-by-default platform operations.",
-      "focusName": "Value",
+      "focusName": "Solution",
       "contributesTo": [
         {
           "alphaName": "Platform Risk And Compliance",
@@ -643,6 +962,12 @@
       "requiredCompetencies": [
         "Platform Security And Compliance Enforcement",
         "Engineering"
+      ],
+      "assetNames": [
+        {
+          "assetName": "establish-secure-guardrails-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -674,6 +999,12 @@
       "requiredCompetencies": [
         "Analysis",
         "Platform Strategic Alignment"
+      ],
+      "assetNames": [
+        {
+          "assetName": "define-platform-capabilities-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -701,6 +1032,12 @@
       "requiredCompetencies": [
         "Engineering",
         "Analysis"
+      ],
+      "assetNames": [
+        {
+          "assetName": "architect-build-foundation-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -720,6 +1057,12 @@
       "requiredCompetencies": [
         "Site Reliability",
         "Engineering"
+      ],
+      "assetNames": [
+        {
+          "assetName": "operate-evolve-system-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -747,6 +1090,12 @@
       "requiredCompetencies": [
         "Engineering",
         "Analysis"
+      ],
+      "assetNames": [
+        {
+          "assetName": "develop-golden-paths-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -774,6 +1123,12 @@
       "requiredCompetencies": [
         "Engineering",
         "Site Reliability"
+      ],
+      "assetNames": [
+        {
+          "assetName": "integrate-toolchain-services-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -789,11 +1144,17 @@
       "requiredCompetencies": [
         "Management",
         "Leadership"
+      ],
+      "assetNames": [
+        {
+          "assetName": "prepare-to-do-work-icon",
+          "type": "icon"
+        }
       ]
     },
     {
-      "name": "Coordinate Delivery Sprints",
-      "description": "Manage agile delivery cycles, allocate engineering capacity, and track velocity to ensure predictable platform feature development.",
+      "name": "Manage Work Execution",
+      "description": "Coordinate delivery cycles, allocate engineering capacity, and track velocity to ensure predictable platform feature development without dictating specific execution frameworks.",
       "focusName": "Endeavor",
       "contributesTo": [
         {
@@ -811,6 +1172,12 @@
       ],
       "requiredCompetencies": [
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "manage-work-execution-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -834,6 +1201,33 @@
       "requiredCompetencies": [
         "Leadership",
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "structure-organizational-topologies-icon",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "name": "Transition Team",
+      "description": "Plan and execute team dissolution, knowledge transfer, and member reassignment when platform initiatives conclude or teams are repurposed.",
+      "focusName": "Endeavor",
+      "contributesTo": [
+        {
+          "alphaName": "Team",
+          "stateName": "Adjourned"
+        }
+      ],
+      "requiredCompetencies": [
+        "Leadership",
+        "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "transition-team-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -861,6 +1255,12 @@
       "requiredCompetencies": [
         "Site Reliability",
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "establish-operational-practices-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -880,6 +1280,12 @@
       "requiredCompetencies": [
         "Platform Security And Compliance Enforcement",
         "Engineering"
+      ],
+      "assetNames": [
+        {
+          "assetName": "implement-policy-as-code-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -903,6 +1309,12 @@
       "requiredCompetencies": [
         "Leadership",
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "drive-cultural-transformation-icon",
+          "type": "icon"
+        }
       ]
     },
     {
@@ -917,6 +1329,41 @@
       ],
       "requiredCompetencies": [
         "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "stop-the-work-icon",
+          "type": "icon"
+        }
+      ]
+    },
+    {
+      "name": "Decommission and Retire",
+      "description": "Safely decouple, deprecate, and remove obsolete platform assets, legacy infrastructure, or older operational processes to minimize technical debt and resource waste.",
+      "focusName": "Endeavor",
+      "contributesTo": [
+        {
+          "alphaName": "Platform",
+          "stateName": "Retiring"
+        },
+        {
+          "alphaName": "Platform Asset",
+          "stateName": "Retiring"
+        },
+        {
+          "alphaName": "Way Of Working",
+          "stateName": "Retired"
+        }
+      ],
+      "requiredCompetencies": [
+        "Engineering",
+        "Management"
+      ],
+      "assetNames": [
+        {
+          "assetName": "decommission-retire-icon",
+          "type": "icon"
+        }
       ]
     }
   ],
@@ -927,31 +1374,31 @@
       "levels": [
         {
           "name": "Basic",
-          "description": "Fundamental awareness",
+          "description": "Understands basic business needs and can parse user feedback.",
           "level": 1,
           "competencyName": "Analysis"
         },
         {
           "name": "Applies",
-          "description": "Applies in simple contexts",
+          "description": "Can map simple user requirements to existing platform capabilities and identify basic friction points.",
           "level": 2,
           "competencyName": "Analysis"
         },
         {
           "name": "Masters",
-          "description": "Applies in most contexts",
+          "description": "Can independently translate complex stakeholder friction points into actionable platform architectural requirements and map out the boundaries of the Thinnest Viable Platform (TVP).",
           "level": 3,
           "competencyName": "Analysis"
         },
         {
           "name": "Adapts",
-          "description": "Adapts to complex contexts",
+          "description": "Can analyze shifting enterprise domains to identify new organizational fracture planes, cognitive load bottlenecks, and strategic platform opportunities.",
           "level": 4,
           "competencyName": "Analysis"
         },
         {
           "name": "Innovating",
-          "description": "Extends to new contexts",
+          "description": "Pioneers new analytical methods for value stream mapping and enterprise capability assessment.",
           "level": 5,
           "competencyName": "Analysis"
         }
@@ -963,31 +1410,31 @@
       "levels": [
         {
           "name": "Basic",
-          "description": "Fundamental awareness",
+          "description": "Understands fundamental software architecture and basic cloud infrastructure concepts.",
           "level": 1,
           "competencyName": "Engineering"
         },
         {
           "name": "Applies",
-          "description": "Applies in simple contexts",
+          "description": "Can implement basic infrastructure components, deployment scripts, or single-node services based on established guidance.",
           "level": 2,
           "competencyName": "Engineering"
         },
         {
           "name": "Masters",
-          "description": "Applies in most contexts",
+          "description": "Can independently design distributed components, author declarative configuration templates, and build automated pipelines for platform ecosystems.",
           "level": 3,
           "competencyName": "Engineering"
         },
         {
           "name": "Adapts",
-          "description": "Adapts to complex contexts",
+          "description": "Can architect complex, multi-tenant platform foundations, resolve systemic integration challenges, and abstract underlying infrastructure complexities for consumers.",
           "level": 4,
           "competencyName": "Engineering"
         },
         {
           "name": "Innovating",
-          "description": "Extends to new contexts",
+          "description": "Develops entirely new engineering paradigms or open-source technical solutions for hyperscale platform orchestration.",
           "level": 5,
           "competencyName": "Engineering"
         }
@@ -999,31 +1446,31 @@
       "levels": [
         {
           "name": "Basic",
-          "description": "Fundamental awareness",
+          "description": "Can participate effectively in team environments and support overarching goals.",
           "level": 1,
           "competencyName": "Leadership"
         },
         {
           "name": "Applies",
-          "description": "Applies in simple contexts",
+          "description": "Can guide small engineering squads and foster adherence to agreed-upon ways of working.",
           "level": 2,
           "competencyName": "Leadership"
         },
         {
           "name": "Masters",
-          "description": "Applies in most contexts",
+          "description": "Can inspire platform teams to embrace DevOps cultures, champion blameless post-mortems, and establish psychological safety for complex engineering efforts.",
           "level": 3,
           "competencyName": "Leadership"
         },
         {
           "name": "Adapts",
-          "description": "Adapts to complex contexts",
+          "description": "Can lead large-scale cultural transformations, overcoming deep organizational resistance to self-service models and declarative operations.",
           "level": 4,
           "competencyName": "Leadership"
         },
         {
           "name": "Innovating",
-          "description": "Extends to new contexts",
+          "description": "Acts as an industry-recognized visionary, shaping the global discourse on platform engineering culture and organizational design.",
           "level": 5,
           "competencyName": "Leadership"
         }
@@ -1035,31 +1482,31 @@
       "levels": [
         {
           "name": "Basic",
-          "description": "Fundamental awareness",
+          "description": "Understands basic task tracking and team coordination.",
           "level": 1,
           "competencyName": "Management"
         },
         {
           "name": "Applies",
-          "description": "Applies in simple contexts",
+          "description": "Can manage the delivery of discrete platform features and organize daily operational workflows.",
           "level": 2,
           "competencyName": "Management"
         },
         {
           "name": "Masters",
-          "description": "Applies in most contexts",
+          "description": "Can independently orchestrate cross-functional platform delivery cycles, balance technical debt against feature velocity, and manage platform service-level agreements.",
           "level": 3,
           "competencyName": "Management"
         },
         {
           "name": "Adapts",
-          "description": "Adapts to complex contexts",
+          "description": "Can adapt delivery structures across highly matrixed environments, transitioning organizations from project-based funding to product-centric platform lifecycles.",
           "level": 4,
           "competencyName": "Management"
         },
         {
           "name": "Innovating",
-          "description": "Extends to new contexts",
+          "description": "Develops novel management and operational frameworks that redefine how global enterprises deliver internal services.",
           "level": 5,
           "competencyName": "Management"
         }
@@ -1179,48 +1626,39 @@
       "levels": [
         {
           "name": "Basic",
-          "description": "Fundamental awareness and understanding of representation concepts.",
+          "description": "Understands the different consumer personas utilizing the platform.",
           "level": 1,
           "competencyName": "Stakeholder Representation"
         },
         {
           "name": "Applies",
-          "description": "Can apply representation concepts in simple contexts.",
+          "description": "Can effectively gather and advocate for the needs of a specific stream-aligned consumer team.",
           "level": 2,
           "competencyName": "Stakeholder Representation"
         },
         {
           "name": "Masters",
-          "description": "Can apply representation concepts in most contexts without supervision.",
+          "description": "Can accurately balance competing requirements from security, networking, and developer teams to ensure the platform interface remains frictionless.",
           "level": 3,
           "competencyName": "Stakeholder Representation"
         },
         {
           "name": "Adapts",
-          "description": "Can apply judgment and adapt representation techniques to complex contexts.",
+          "description": "Can negotiate complex political landscapes, aligning executive C-suite objectives with the daily operational realities of the developer workforce.",
           "level": 4,
           "competencyName": "Stakeholder Representation"
         },
         {
           "name": "Innovating",
-          "description": "Recognized expert, able to extend representation concepts to new contexts.",
+          "description": "Creates novel enterprise feedback loops and representation models that radically democratize platform evolution.",
           "level": 5,
           "competencyName": "Stakeholder Representation"
         }
       ]
     }
   ],
-  "authors": [
-    "Kernel Authors"
-  ],
   "createdAt": "2023-10-25T00:00:00Z",
   "updatedAt": "2023-10-25T00:00:00Z",
-  "version": "1",
-  "keywords": [
-    "platform",
-    "adoption",
-    "kernel"
-  ],
   "narrativeTypes": [
     {
       "name": "The STAR Format",
@@ -1326,7 +1764,7 @@
           "howToUse": "Use this to define constraints. Instead of saying \"user,\" say \"First-time Visitor\" or \"System Administrator.\" This helps the developers understand if the UI should be \"idiot-proof\" or \"power-user focused.\""
         },
         {
-          "name": "I wan to [perform some action]",
+          "name": "I want to [perform some action]",
           "description": "This is the intent or the feature itself. It describes the action the user wants to take within the software.",
           "howToUse": "Keep this focused on the **what,** not the **how.** Avoid mentioning specific UI elements like **click a red button.** Focus on the functional capability you are giving them."
         },
@@ -1384,94 +1822,472 @@
         }
       ]
     },
-      {
-        "name": "Essay Narrative",
-        "description": "A cohesive narrative format that guides the reader carefully through the evidence for and against a proposition before reaching a conclusion.",
-        "narrativeElements": [
-          {
-            "name": "Introduction",
-            "description": "The start of the essay used to contextualise the work and grab the attention of the reader.",
-            "howToUse": "Explain how the topic sits within the framework of the subject area as a whole. Outline the structure of your essay very briefly, but do not give your conclusions away on the first page."
-          },
-          {
-            "name": "Defining Key Concepts",
-            "description": "A section establishing the interpretation of central concepts without relying on dictionary definitions.",
-            "howToUse": "Relate in your own words how the terms you will be using are to be interpreted within the context of your essay."
-          },
-          {
-            "name": "Presenting Evidence",
-            "description": "The core discussion where secondary works are evaluated and viewpoints are balanced against each other.",
-            "howToUse": "Be selective in your choice of evidence and use signposting language to guide your reader. Quote sparingly, paraphrase occasionally, and summarise often to integrate other people's ideas into your own argument."
-          },
-          {
-            "name": "Conclusion",
-            "description": "The closing section that synthesises the presented evidence and forms a direct response to the assignment title.",
-            "howToUse": "Draw the threads of your argument together. Do not bring in new evidence in your concluding paragraphs or try to cram in ideas that you have not developed fully."
-          }
-        ]
-      },
-      {
-        "name": "Report Narrative",
-        "description": "A formal, informative structure broken down into sections and sub-sections to order and communicate relevant information in an easily navigable way.",
-        "narrativeElements": [
-          {
-            "name": "Executive Summary",
-            "description": "A stand-alone summary of the entire report's purpose, methodology, findings, conclusions, and recommendations.",
-            "howToUse": "This should be the last thing that you write. Keep it concise (usually a paragraph or two and always less than a page) to enable the reader to make an informed decision about whether they want to read the report itself."
-          },
-          {
-            "name": "Introduction",
-            "description": "Explains the rationale for undertaking the work reported on, the background, and the scope of the report.",
-            "howToUse": "State what the report is about, define how it meets the requirements of the brief, and explain your research methods."
-          },
-          {
-            "name": "Methods",
-            "description": "A clear description of how the investigation was carried out and why specific methods were chosen.",
-            "howToUse": "Write this section concisely but thoroughly. Provide step-by-step details in such a way that a reader could replicate the research you have done."
-          },
-          {
-            "name": "Results and Findings",
-            "description": "A purely factual presentation of the research data using text, graphs, tables, or diagrams.",
-            "howToUse": "Present the findings of your research as simply as possible. Save your interpretation of the results for the Discussion section."
-          },
-          {
-            "name": "Discussion",
-            "description": "The section that brings everything together by showing how the findings relate to the purpose of the report and previous research.",
-            "howToUse": "Interpret the results, showing how they respond to the brief explained in the introduction. Mention if there were any problems or unexpected results and how they were solved."
-          },
-          {
-            "name": "Recommendations",
-            "description": "Suggestions for a future course of action based on the evidence and conclusions.",
-            "howToUse": "Make recommendations that solve problems or help to develop a new strategy. Make an effort to sound authoritative and certain in your choices."
-          }
-        ]
-      },
-      {
-        "name": "Citation Standard",
-        "description": "The structural elements required for a reference list entry.",
-        "narrativeElements": [
-          {
-            "name": "Author",
-            "description": "The person, group, or organization responsible for the work.",
-            "howToUse": "Invert authors' names (Lastname, F. M.). Use an ampersand (&) before the final author's name in a list. For groups, use the full name."
-          },
-          {
-            "name": "Date",
-            "description": "The publication date of the work.",
-            "howToUse": "Enclose the year in parentheses, followed by a period: (2026). For works with no date, use (n.d.)."
-          },
-          {
-            "name": "Title",
-            "description": "The name of the specific work being cited.",
-            "howToUse": "Italicize the title of standalone works (books, reports). Use sentence case—capitalize only the first word of the title and subtitle."
-          },
-          {
-            "name": "Source",
-            "description": "Where the work can be retrieved, such as a journal, publisher, or URL.",
-            "howToUse": "Include the periodical title and volume/issue if applicable. Provide a DOI or URL as a live link; do not include 'Retrieved from' for most entries."
-          }
-        ]
-      }
-    
+    {
+      "name": "Essay Narrative",
+      "description": "A cohesive narrative format that guides the reader carefully through the evidence for and against a proposition before reaching a conclusion.",
+      "narrativeElements": [
+        {
+          "name": "Introduction",
+          "description": "The start of the essay used to contextualise the work and grab the attention of the reader.",
+          "howToUse": "Explain how the topic sits within the framework of the subject area as a whole. Outline the structure of your essay very briefly, but do not give your conclusions away on the first page."
+        },
+        {
+          "name": "Defining Key Concepts",
+          "description": "A section establishing the interpretation of central concepts without relying on dictionary definitions.",
+          "howToUse": "Relate in your own words how the terms you will be using are to be interpreted within the context of your essay."
+        },
+        {
+          "name": "Presenting Evidence",
+          "description": "The core discussion where secondary works are evaluated and viewpoints are balanced against each other.",
+          "howToUse": "Be selective in your choice of evidence and use signposting language to guide your reader. Quote sparingly, paraphrase occasionally, and summarise often to integrate other people's ideas into your own argument."
+        },
+        {
+          "name": "Conclusion",
+          "description": "The closing section that synthesises the presented evidence and forms a direct response to the assignment title.",
+          "howToUse": "Draw the threads of your argument together. Do not bring in new evidence in your concluding paragraphs or try to cram in ideas that you have not developed fully."
+        }
+      ]
+    },
+    {
+      "name": "Report Narrative",
+      "description": "A formal, informative structure broken down into sections and sub-sections to order and communicate relevant information in an easily navigable way.",
+      "narrativeElements": [
+        {
+          "name": "Executive Summary",
+          "description": "A stand-alone summary of the entire report's purpose, methodology, findings, conclusions, and recommendations.",
+          "howToUse": "This should be the last thing that you write. Keep it concise (usually a paragraph or two and always less than a page) to enable the reader to make an informed decision about whether they want to read the report itself."
+        },
+        {
+          "name": "Introduction",
+          "description": "Explains the rationale for undertaking the work reported on, the background, and the scope of the report.",
+          "howToUse": "State what the report is about, define how it meets the requirements of the brief, and explain your research methods."
+        },
+        {
+          "name": "Methods",
+          "description": "A clear description of how the investigation was carried out and why specific methods were chosen.",
+          "howToUse": "Write this section concisely but thoroughly. Provide step-by-step details in such a way that a reader could replicate the research you have done."
+        },
+        {
+          "name": "Results and Findings",
+          "description": "A purely factual presentation of the research data using text, graphs, tables, or diagrams.",
+          "howToUse": "Present the findings of your research as simply as possible. Save your interpretation of the results for the Discussion section."
+        },
+        {
+          "name": "Discussion",
+          "description": "The section that brings everything together by showing how the findings relate to the purpose of the report and previous research.",
+          "howToUse": "Interpret the results, showing how they respond to the brief explained in the introduction. Mention if there were any problems or unexpected results and how they were solved."
+        },
+        {
+          "name": "Recommendations",
+          "description": "Suggestions for a future course of action based on the evidence and conclusions.",
+          "howToUse": "Make recommendations that solve problems or help to develop a new strategy. Make an effort to sound authoritative and certain in your choices."
+        }
+      ]
+    },
+    {
+      "name": "SDLC",
+      "description": "Software Development Lifecycle pattern for systematic technical delivery from requirements through maintenance.",
+      "narrativeElements": [
+        {
+          "name": "Plan",
+          "description": "Requirements gathering and project planning phase.",
+          "howToUse": "Define objectives, scope, requirements, and success criteria for the initiative."
+        },
+        {
+          "name": "Design",
+          "description": "Architecture and detailed design phase.",
+          "howToUse": "Establish technical architecture, design patterns, and implementation approach."
+        },
+        {
+          "name": "Build",
+          "description": "Implementation and construction phase.",
+          "howToUse": "Develop, configure, and assemble the solution components."
+        },
+        {
+          "name": "Test",
+          "description": "Validation and quality assurance phase.",
+          "howToUse": "Verify functionality, performance, security, and integration through testing."
+        },
+        {
+          "name": "Deploy",
+          "description": "Release and deployment phase.",
+          "howToUse": "Roll out to production environment with appropriate deployment strategy."
+        },
+        {
+          "name": "Maintain",
+          "description": "Operations and continuous improvement phase.",
+          "howToUse": "Monitor, optimize, patch, and evolve the solution in production."
+        }
+      ]
+    },
+    {
+      "name": "PDCA",
+      "description": "Plan-Do-Check-Act cycle (Deming Cycle) for continuous improvement and iterative refinement.",
+      "narrativeElements": [
+        {
+          "name": "Plan",
+          "description": "Establish objectives and processes.",
+          "howToUse": "Identify improvement opportunity, analyze current state, and plan intervention."
+        },
+        {
+          "name": "Do",
+          "description": "Implement the plan on small scale.",
+          "howToUse": "Execute the planned change or experiment in controlled environment."
+        },
+        {
+          "name": "Check",
+          "description": "Measure and evaluate results.",
+          "howToUse": "Assess outcomes against objectives, identify gaps and learnings."
+        },
+        {
+          "name": "Act",
+          "description": "Standardize or iterate based on learnings.",
+          "howToUse": "Scale successful changes, adjust plan based on findings, repeat cycle."
+        }
+      ]
+    },
+    {
+      "name": "Build-Measure-Learn",
+      "description": "Lean Startup cycle for validating assumptions through rapid experimentation and feedback.",
+      "narrativeElements": [
+        {
+          "name": "Build",
+          "description": "Create minimum viable solution.",
+          "howToUse": "Develop smallest increment that can test key hypothesis or assumption."
+        },
+        {
+          "name": "Measure",
+          "description": "Collect data and feedback.",
+          "howToUse": "Instrument, observe, and gather quantitative and qualitative evidence."
+        },
+        {
+          "name": "Learn",
+          "description": "Analyze and decide next iteration.",
+          "howToUse": "Synthesize findings, validate or invalidate hypothesis, pivot or persevere."
+        }
+      ]
+    },
+    {
+      "name": "Design-Build-Run-Optimize",
+      "description": "Architectural lifecycle for infrastructure and platform engineering spanning conception through continuous improvement.",
+      "narrativeElements": [
+        {
+          "name": "Design",
+          "description": "Architecture definition and planning.",
+          "howToUse": "Define architecture, topology, technology choices, and capacity planning."
+        },
+        {
+          "name": "Build",
+          "description": "Provisioning and configuration.",
+          "howToUse": "Deploy infrastructure, configure systems, establish integrations and connectivity."
+        },
+        {
+          "name": "Run",
+          "description": "Operations and steady-state management.",
+          "howToUse": "Monitor health, respond to incidents, maintain availability and performance."
+        },
+        {
+          "name": "Optimize",
+          "description": "Continuous improvement and evolution.",
+          "howToUse": "Tune performance, reduce costs, enhance capabilities based on operational insights."
+        }
+      ]
+    },
+    {
+      "name": "Crawl-Walk-Run",
+      "description": "Maturity progression model for incremental capability building and adoption.",
+      "narrativeElements": [
+        {
+          "name": "Crawl",
+          "description": "Initial capability establishment.",
+          "howToUse": "Establish foundational capability with limited scope, manual processes, learning focus."
+        },
+        {
+          "name": "Walk",
+          "description": "Capability refinement and scaling.",
+          "howToUse": "Expand scope, introduce automation, standardize processes, build confidence."
+        },
+        {
+          "name": "Run",
+          "description": "Mature, optimized operation.",
+          "howToUse": "Full automation, enterprise scale, optimization focus, continuous evolution."
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "name": "opportunity-icon",
+      "description": "Opportunity alpha icon - business opportunity and drivers",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-lightbulb",
+      "fontWeight": "900",
+      "fontUrl": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    },
+    {
+      "name": "platform-value-economics-icon",
+      "description": "Platform Value And Economics alpha icon - financial justification",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-chart-line",
+      "fontWeight": "900"
+    },
+    {
+      "name": "stakeholders-icon",
+      "description": "Stakeholders alpha icon - people and organizations",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-users",
+      "fontWeight": "900"
+    },
+    {
+      "name": "requirements-icon",
+      "description": "Requirements alpha icon - needs and specifications",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-list-check",
+      "fontWeight": "900"
+    },
+    {
+      "name": "platform-icon",
+      "description": "Platform alpha icon - infrastructure foundation",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-cubes",
+      "fontWeight": "900"
+    },
+    {
+      "name": "platform-consumption-interface-icon",
+      "description": "Platform Consumption Interface alpha icon - developer experience",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-window-maximize",
+      "fontWeight": "900"
+    },
+    {
+      "name": "platform-asset-icon",
+      "description": "Platform Asset alpha icon - platform components",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-cube",
+      "fontWeight": "900"
+    },
+    {
+      "name": "work-icon",
+      "description": "Work alpha icon - tasks and activities",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-tasks",
+      "fontWeight": "900"
+    },
+    {
+      "name": "team-icon",
+      "description": "Team alpha icon - people and collaboration",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-user-group",
+      "fontWeight": "900"
+    },
+    {
+      "name": "way-of-working-icon",
+      "description": "Way Of Working alpha icon - processes and practices",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-gears",
+      "fontWeight": "900"
+    },
+    {
+      "name": "platform-governance-icon",
+      "description": "Platform Governance alpha icon - oversight and control",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-shield-halved",
+      "fontWeight": "900"
+    },
+    {
+      "name": "platform-risk-compliance-icon",
+      "description": "Platform Risk And Compliance alpha icon - security and regulatory",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-balance-scale",
+      "fontWeight": "900"
+    },
+    {
+      "name": "organizational-change-icon",
+      "description": "Organizational Change alpha icon - transformation and adaptation",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-arrows-spin",
+      "fontWeight": "900"
+    },
+    {
+      "name": "explore-possibilities-icon",
+      "description": "Explore Possibilities activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-compass",
+      "fontWeight": "900"
+    },
+    {
+      "name": "assess-business-value-icon",
+      "description": "Assess Business Value activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-calculator",
+      "fontWeight": "900"
+    },
+    {
+      "name": "monitor-value-realization-icon",
+      "description": "Monitor Value Realization activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-gauge",
+      "fontWeight": "900"
+    },
+    {
+      "name": "manage-platform-economics-icon",
+      "description": "Manage Platform Economics activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-coins",
+      "fontWeight": "900"
+    },
+    {
+      "name": "engage-platform-consumers-icon",
+      "description": "Engage Platform Consumers activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-handshake",
+      "fontWeight": "900"
+    },
+    {
+      "name": "evangelize-support-icon",
+      "description": "Evangelize and Support activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-bullhorn",
+      "fontWeight": "900"
+    },
+    {
+      "name": "establish-secure-guardrails-icon",
+      "description": "Establish Secure Guardrails activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-shield",
+      "fontWeight": "900"
+    },
+    {
+      "name": "define-platform-capabilities-icon",
+      "description": "Define Platform Capabilities activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-sitemap",
+      "fontWeight": "900"
+    },
+    {
+      "name": "architect-build-foundation-icon",
+      "description": "Architect and Build the Foundation activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-hammer",
+      "fontWeight": "900"
+    },
+    {
+      "name": "operate-evolve-system-icon",
+      "description": "Operate and Evolve the System activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-wrench",
+      "fontWeight": "900"
+    },
+    {
+      "name": "develop-golden-paths-icon",
+      "description": "Develop the Golden Paths activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-road",
+      "fontWeight": "900"
+    },
+    {
+      "name": "integrate-toolchain-services-icon",
+      "description": "Integrate Toolchain Services activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-link",
+      "fontWeight": "900"
+    },
+    {
+      "name": "prepare-to-do-work-icon",
+      "description": "Prepare To Do The Work activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-clipboard-check",
+      "fontWeight": "900"
+    },
+    {
+      "name": "manage-work-execution-icon",
+      "description": "Manage Work Execution activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-project-diagram",
+      "fontWeight": "900"
+    },
+    {
+      "name": "structure-organizational-topologies-icon",
+      "description": "Structure Organizational Topologies activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-network-wired",
+      "fontWeight": "900"
+    },
+    {
+      "name": "transition-team-icon",
+      "description": "Transition Team activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-people-arrows",
+      "fontWeight": "900"
+    },
+    {
+      "name": "establish-operational-practices-icon",
+      "description": "Establish Operational Practices activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-book-open",
+      "fontWeight": "900"
+    },
+    {
+      "name": "implement-policy-as-code-icon",
+      "description": "Implement Policy-as-Code activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-code",
+      "fontWeight": "900"
+    },
+    {
+      "name": "drive-cultural-transformation-icon",
+      "description": "Drive Cultural Transformation activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-heart",
+      "fontWeight": "900"
+    },
+    {
+      "name": "stop-the-work-icon",
+      "description": "Stop The Work activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-stop",
+      "fontWeight": "900"
+    },
+    {
+      "name": "decommission-retire-icon",
+      "description": "Decommission and Retire activity space icon",
+      "type": "font-character",
+      "fontFamily": "Font Awesome 6 Free",
+      "fontCharacter": "fa-trash",
+      "fontWeight": "900"
+    }
   ]
 }
