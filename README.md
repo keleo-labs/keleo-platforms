@@ -1,119 +1,82 @@
 # keleo-platforms
 
-A repository for creating and organizing **abstracted infrastructure platforms** using (IT) engineering practices and methods with the [Keleo Studio](https://github.com/keleo-labs/keleo-studio) application.
+Baseline practices, practice extensions, and composed methods for **abstracted infrastructure platforms** -- authored and visualized with [Keleo Studio](https://github.com/keleo-labs/keleo-studio).
 
-## Overview
+Part of the [keleo-labs](https://github.com/keleo-labs) organization.
 
-This template provides a standardized directory structure for collecting JSON-formatted practices that follow the schema defined in keleo-studio. The practices created here can be authored, visualized, and managed using the Keleo Studio web application.
+## What's In This Repository
 
-## What is Keleo Studio?
+This repository provides a curated set of JSON-formatted practices following the SEMAT Essence-inspired schema. Each practice models a domain through **Alphas** (essential elements of concern), **Activities**, **WorkProducts**, **Personas**, **Patterns**, and **Narratives** -- organized across three areas of concern: **Value**, **Solution**, and **Endeavor**.
 
-Keleo Studio is a comprehensive practice management and method composition system that enables teams to:
+### Baselines
 
-- **Author Practices**: Create software engineering practices with schema validation
-- **Compose Methods**: Build methods from baseline practices and extensions
-- **Visualize Workflows**: Generate Kanban pattern boards and flow diagrams
-- **Manage Libraries**: Browse, import, export, and organize practice collections
+Foundational ontologies defining the core Alphas, activity spaces, competencies, and narrative frameworks. All practices and methods in this repository build on one of these baselines.
 
-## Directory Structure
+| Baseline | Domain |
+|----------|--------|
+| [Platform Adoption Essentials](baseline/platform-adoption-essentials.json) | General platform transformations |
+| [IDP Essentials](baseline/idp-essentials.json) | Internal Developer Platforms |
+| [Infrastructure Automation Essentials](baseline/infrastructure-automation-essentials.json) | Infrastructure as Code |
 
+See [baseline/README.md](baseline/README.md) for details and concern diagrams.
+
+### Practices
+
+Extensions that add domain-specific Alphas, activities, personas, and patterns to a baseline.
+
+| Practice | Baseline | Focus |
+|----------|----------|-------|
+| [Team Structure & Cognitive Load](practices/team-structure--cognitive-load.json) | Platform Adoption Essentials | Team types, interaction modes, cognitive load management |
+| [Organizational Evolution & Sensing](practices/organizational-evolution--sensing.json) | Platform Adoption Essentials | Continuous topology adaptation and platform-as-product |
+| [Team Topologies Lifecycle](practices/team-topologies-lifecycle.json) | Platform Adoption Essentials | Orchestration of team structure and org evolution practices |
+
+See [practices/README.md](practices/README.md) for details.
+
+### Methods
+
+Composed methodologies combining a baseline with multiple practices.
+
+| Method | Baseline | Practices |
+|--------|----------|-----------|
+| [Team Topologies](methods/team-topologies.json) | Platform Adoption Essentials | Team Structure & Cognitive Load, Organizational Evolution & Sensing, Team Topologies Lifecycle |
+| [Platform Engineering](methods/platform-engineering.json) | IDP Essentials | Platform Engineering (CNCF), Team Topologies Lifecycle, Organizational Evolution & Sensing, Team Structure & Cognitive Load |
+
+See [methods/README.md](methods/README.md) for details and concern diagrams.
+
+## Viewing and Editing
+
+These JSON files are best viewed and edited using **[Keleo Studio](https://github.com/keleo-labs/keleo-studio)**, which provides:
+
+- **Practice Author** -- WYSIWYG editor for practice JSON
+- **Method Builder** -- Drag-and-drop composition of practices into methods
+- **Flow Visualizer** -- Kanban pattern boards and Sankey flow diagrams
+- **Library** -- Browse, import, and export practice collections
+
+```bash
+# Run Keleo Studio locally
+cd ../adoptionframework    # or wherever keleo-studio is cloned
+npm install
+npm run dev
+# Open http://localhost:3000
 ```
-keleo-template/
-├── baseline/          # PracticeBaseline JSON files (kernel practices)
-├── methods/           # Method JSON files (composed practices)
-└── practices/         # Practice JSON files (extensions)
-```
 
-### Directory Purposes
+## Generating New Practices
 
-- **baseline/**: Contains foundational kernel practices that define core elements (Alphas, States, Activities, WorkProducts, Competencies, etc.)
-- **practices/**: Contains practice extensions that build upon baselines with specific methodologies
-- **methods/**: Contains composed methods that combine a baseline with multiple practices
+Keleo Studio includes LLM prompts for generating validated practices from source documentation:
 
-## Getting Started
+- **Full 11-phase process** (`full-process-gem.md`): Personas, Alphas, WorkProducts, Activities, PersonaGroups, Narratives, Lifecycle Patterns, Narrative Patterns, Practice Formation, Logical Integrity, Final Output
+- **Two-phase research process** (`phase 1 gem.md` + `phase 2 gem.md`): Generate a human-readable research report first, then convert to validated JSON
 
-### Prerequisites
-
-- Access to Keleo Studio (Adoption Framework) - see the [main repository](https://github.com/keleo-labs/keleo-studio)
-- Basic understanding of SEMAT language concepts
-- A source methodology or documentation you want to convert into practices
-
-### Workflow
-
-1. **Set up Keleo Studio**: Clone and run the Adoption Framework application (typically at `../adoptionframework`)
-2. **Generate Practices**: Use the LLM-based generation process with the prompts in the Keleo Studio `prompts and instructions/` folder
-3. **Organize Output**: Place generated JSON files in the appropriate directories:
-   - New kernel practices → `baseline/`
-   - Practice extensions → `practices/`
-   - Composed methods → `methods/`
-4. **Validate**: Use Keleo Studio's validation tools to ensure schema compliance
-5. **Visualize**: Import into Keleo Studio to view Kanban boards and flow diagrams
-
-## Generating Practices with LLMs
-
-Keleo Studio includes comprehensive prompts for generating practices from source documentation. The main approaches are:
-
-### Full Process (11 Phases)
-
-Use `full-process-gem.md` for complete practice generation with rigorous validation:
-
-1. Load the baseline kernel and schema
-2. Provide source documentation (methodology, framework, or workflow)
-3. Work through 11 phases: Personas → Alphas → WorkProducts → Activities → PersonaGroups → Narratives → Lifecycle Patterns → Narrative Patterns → Practice Formation → Logical Integrity → Final Output
-4. Output validated JSON practices/methods
-
-### Two-Phase Research Process
-
-Use `phase 1 gem.md` and `phase 2 gem.md` for a research-first approach:
-
-- **Phase 1**: Generate human-readable research report analyzing the source methodology
-- **Phase 2**: Convert the research report into validated JSON
-
-## Practice Components
-
-Practices in this system contain:
-
-- **Alphas**: Essential elements of concern (e.g., Platform, Team, Opportunity)
-- **States**: Progression checkpoints for alphas
-- **Activities**: Work that contributes to alpha states
-- **WorkProducts**: Artifacts produced by activities
-- **Patterns**: Temporal progressions showing how practices unfold
-- **Personas & PersonaGroups**: Roles and teams involved
-- **Competencies**: Required skills mapped to personas
-- **Narratives**: Contextual storytelling for elements
+Prompts are in the Keleo Studio `prompts and instructions/` directory.
 
 ## Validation
 
-All practices must conform to the JSON schema defined in Keleo Studio:
-
 ```bash
-# Validate a practice file using Keleo Studio
 cd ../adoptionframework
-node validate-schema.js path/to/practice.json
+node validate-schema.js path/to/practice.json      # schema validation
+node validate-full.js path/to/practice.json         # schema + logical integrity
 ```
-
-## Integration with Keleo Studio
-
-To use these practices in Keleo Studio:
-
-1. Start the Keleo Studio development server
-2. Use the **Library** feature to import practice JSON files
-3. Use the **Practice Author** to edit and refine practices
-4. Use the **Method Builder** to compose methods from practices
-5. Use the **Flow Visualizer** to view Kanban pattern boards
-
-## Example Practice Libraries
-
-See the Keleo Studio repository for reference examples:
-- `practices/adoption-library.json` - Main practice library
-- `practices/team-topologies-method.json` - Example composed method
 
 ## License
 
-This template repository is licensed under the Apache License 2.0.
-
-## Additional Resources
-
-- [Keleo Studio Documentation](https://github.com/keleo-labs/keleo-studio) (Private repository)
-- [SEMAT Essence Framework](https://www.semat.org/)
-- Keleo Studio `prompts and instructions/` folder for LLM generation guides
+Apache License 2.0 -- see [LICENSE](LICENSE).
